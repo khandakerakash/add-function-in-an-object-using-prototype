@@ -1,19 +1,19 @@
 'use strict'
 
-let checkPalindrome = ((word) => {
+// Using Promise
+const makeRequest = () =>
+  getJSON()
+    .then(data => {
+      console.log(data)
+      return "done"
+    })
 
-  let l = word.length;
-    for (var i = 0; i < l / 2; i++) {
-        if (word.charAt(i) !== word.charAt(l - 1 - i)) {
-            return false;
-        }
-    }
-    return true;
-}); 
+makeRequest('Akash')
 
-
-if (checkPalindrome("Ammu")) {
-    console.log("The word is a palindrome!");
-} else {
-    console.log("The word is NOT a palindrome!!");
+// Using async / await
+const make2Request = async () => {
+  console.log(await get2JSON())
+  return "done"
 }
+
+make2Request('Kh')

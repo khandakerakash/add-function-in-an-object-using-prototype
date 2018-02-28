@@ -5,7 +5,19 @@
         <title>JavaScript Test</title>
     </head>
     <body>
-        <h1>2. Example of arrow function, make a function to check palindrome using arrow function.</h1>
+        <h1>3. Explain difference between Async/Await and a javascript Promise.</h1>
+        <p>Promises are eager, meaning that a promise will start doing whatever task you give it as soon as the promise constructor is invoked. If you need lazy, check out observables or tasks.</p>
+        <p>Promises has three possible states:</p>
+        <ul>
+        	<li>Fulfilled: onFulfilled() will be called (e.g., resolve() was called)</li>
+        	<li>Rejected: onRejected() will be called (e.g., reject() was called)</li>
+        	<li>Pending: not yet fulfilled or rejected</li>
+        </ul><br>
+        <ul>
+        	<li>Async/await is actually built on top of promises. It cannot be used with plain callbacks or node callbacks.</li>
+        	<li>Async/await is, like promises, non blocking.</li>
+        	<li>Async/await makes asynchronous code look and behave a little more like synchronous code.</li>
+        	<li><strong>Note:</strong> If is use async in function, then I must use 'await' before in my execution block</li>
+        </ul>
     </body>
-    <script src="script.js"></script>
 </html>
