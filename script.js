@@ -1,12 +1,19 @@
 'use strict'
-let Person = function(name) {
-  this.name = name;
-};
 
-Person.prototype.getName = function() {
-  return this.name;
-};
+let checkPalindrome = ((word) => {
 
-let aPerson = new Person('Akash');
+  let l = word.length;
+    for (var i = 0; i < l / 2; i++) {
+        if (word.charAt(i) !== word.charAt(l - 1 - i)) {
+            return false;
+        }
+    }
+    return true;
+}); 
 
-console.log(aPerson.getName())
+
+if (checkPalindrome("Ammu")) {
+    console.log("The word is a palindrome!");
+} else {
+    console.log("The word is NOT a palindrome!!");
+}
